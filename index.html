@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pergunta do século</title>
+</head>
+<style>
+    body{
+        background-color: rgb(16, 224, 148);
+    }
+
+    .fundo {
+        background-color: rgb(241, 241, 242);
+        height: 500px;
+        width: 400px;
+        margin: auto;
+        margin-top: 25px;
+        border-radius: 20px;
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        padding-top: 10px;
+    }
+
+    #sim{
+        height: 40px;
+        width: 60px;
+        background-color: rgb(54, 239, 178);
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 10px;
+        color: white;
+        margin-left: -55px;
+    }
+
+    #nao{
+        position: absolute;
+        height: 40px;
+        width: 60px;
+        background-color: rgb(54, 239, 178);
+        border: 2px solid rgb(9, 9, 9);
+        border-radius: 10px;
+        color: white;
+        margin-left: 20px;
+    }
+
+    a:link {
+        color:#ffffff;
+        text-decoration:none;
+    }
+
+    a:visited {
+        color:#ffffff;
+        text-decoration:none;
+    }
+
+    img {
+        width: 150px;
+        position: absolute;
+        margin-top: 90px;
+        margin-left: -60px;
+        border: 5px solid rgb(0, 253, 164);
+        border-radius: 20px;
+    }
+
+    
+</style>
+<body>
+    <div class="fundo">
+        <h1>Bora marcar de sair?</h1>
+
+        <img src="https://i.pinimg.com/originals/19/11/66/191166b7c7813e846b70b41fdf6e268d.gif" alt="dog">
+
+        <button id="sim">
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Sim</a>
+        </button>
+        <button onmouseover="fuja()" id="nao">Não</button>
+    </div>
+    
+    <script>
+        function fuja() {
+            var botaoNao = document.getElementById("nao")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY)
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+        }
+    </script>
+    
+
+</body>
+</html>
